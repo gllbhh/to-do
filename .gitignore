@@ -1,0 +1,45 @@
+# 1. Operating system files
+.DS_Store
+Thumbs.db
+
+# 2. Node.js dependencies (if you use Node for tooling or backend)
+node_modules/
+server/node_modules
+npm-debug.log
+yarn-error.log
+pnpm-lock.yaml
+
+# 3. Build or dist directories (if you have a bundler/build step)
+dist/
+build/
+out/
+
+# 4. Logs
+*.log
+logs/
+*.log.*
+
+# 5. Environment files (often contain MySQL credentials or API keys)
+.env
+.env.local
+.env.*.local
+
+# 6. VS Code settings (if you don't want to commit personal workspace settings)
+.vscode/
+
+# 7. Coverage output (if you use testing/coverage tools like Jest)
+coverage/
+
+# 8. Miscellaneous
+# - For example, compiled or minified files if you prefer not to commit them
+*.min.js
+*.min.css
+
+# 9. MySQL dumps or data files (if you generate them in your repo folder)
+#*.sql
+*.sql.gz
+*.dump
+
+# 10. Temporary files
+*.tmp
+*.swp

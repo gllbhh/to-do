@@ -1,3 +1,8 @@
+/*
+.\js\index.js
+Java script that runs on the index.html page
+*/
+
 const list = document.querySelector("ul");
 const imput = document.querySelector("input");
 
