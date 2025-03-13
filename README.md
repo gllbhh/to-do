@@ -132,3 +132,7 @@ Some of the example code contained typeScript syntax. Was easy quite easy to fix
 Add `.gitignore` file
 
 ## To-Do part 3
+
+![ToDo week 3](./screenshots/todo_part_3.png)
+The frontend script can fetch data from the backend by making HTTP call.
+The frontend script can push data to the backend by using post HTTP method.
