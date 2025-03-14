@@ -136,3 +136,22 @@ Add `.gitignore` file
 ![ToDo week 3](./screenshots/todo_part_3.png)
 The frontend script can fetch data from the backend by making HTTP call.
 The frontend script can push data to the backend by using post HTTP method.
+
+## To-Do part 4
+
+Add bootstrap JavaScript (idk why yet)
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+```
+
+Create new files:
+
+- `.\js\class\Task.js`
+- `.\js\class\Todos.js`
+
+Change link to `\js\index.js` to support export/import
+
+```html
+<script src="./js/index.js" type="module"></script>
+```
