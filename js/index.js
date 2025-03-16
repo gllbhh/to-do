@@ -19,9 +19,35 @@ const input = document.querySelector("input"); // The input field for adding new
 // Function to create and render a task in the UI
 const renderTask = (task) => {
 	const li = document.createElement("li"); // Create a new <li> element
-	li.setAttribute("class", "list-group-item"); // Add Bootstrap list-group-item class for styling
-	li.innerHTML = task.getText(); // Set the task description as innerHTML
+	li.setAttribute("class", "list-group-item");
+	li.setAttribute("data-key", task.getId().toString());
+	renderSpan(li, task.getText());
+	renderLink(li, task.getId());
 	list.appendChild(li); // Append the task to the <ul> list
+};
+
+const renderSpan = (li, text) => {
+	const span = li.appendChild(document.createElement("span"));
+	span.innerHTML = text;
+};
+
+const renderLink = (li, id) => {
+	const a = li.appendChild(document.createElement("a"));
+	a.innerHTML = '<i class="bi bi-trash"></i>';
+	a.setAttribute("style", "float: right");
+	a.addEventListener("click", (event) => {
+		todos
+			.removeTask(id)
+			.then((removed_id) => {
+				const li_to_remove = document.querySelector(`[data-key='${removed_id}']`);
+				if (li_to_remove) {
+					list.removeChild(li_to_remove);
+				}
+			})
+			.catch((error) => {
+				alert(error);
+			});
+	});
 };
 
 // Function to retrieve tasks from the backend and render them

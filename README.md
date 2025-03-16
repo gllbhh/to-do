@@ -155,3 +155,9 @@ Change link to `\js\index.js` to support export/import
 ```html
 <script src="./js/index.js" type="module"></script>
 ```
+
+## To-Do part 5
+
+Add delete task functionality. Everything worked fine.
+
+![ToDo week 5](./screenshots/todo_part_5.png)

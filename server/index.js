@@ -13,6 +13,7 @@ require("dotenv").config(); // Load environment variables from .env file
 const app = express(); // Initialize Express application
 app.use(cors()); // Enable CORS to allow cross-origin requests
 app.use(express.json()); // Middleware to parse incoming JSON requests
+app.use(express.urlencoded({ extended: false }));
 
 const port = 3001; // Define the port number where the server will run
 
@@ -46,6 +47,18 @@ app.post("/new", (req, res) => {
 			}
 		}
 	);
+});
+
+app.delete("/delete/:id", async (req, res) => {
+	const pool = openDb();
+	const id = parseInt(req.params.id);
+	pool.query("delete from task where id = $1", [id], (error, result) => {
+		if (error) {
+			res.status(500).json({ error: error.message });
+		} else {
+			res.status(200).json({ id: id });
+		}
+	});
 });
 
 // Function to establish a connection with the PostgreSQL database

@@ -1,4 +1,3 @@
-// Import the Task class from the "Task.js" module
 import { Task } from "./Task.js";
 
 class Todos {
@@ -44,6 +43,11 @@ class Todos {
 		return task; // Return the newly created task
 	};
 
+	#removeFromArray = (id) => {
+		const arrayWithoutRemoved = this.#tasks.filter((task) => task.id !== id);
+		this.#tasks = arrayWithoutRemoved;
+	};
+
 	// Method to add a new task to the backend and store it in the local array
 	addTask = (text) => {
 		return new Promise(async (resolve, reject) => {
@@ -62,6 +66,25 @@ class Todos {
 					},
 					(error) => {
 						reject(error); // Reject the promise in case of an error
+					}
+				);
+		});
+	};
+
+	// Method to remov etask from the backend
+	removeTask = (id) => {
+		return new Promise(async (resolve, reject) => {
+			fetch(this.#backend_url + "/delete/" + id, {
+				method: "delete",
+			})
+				.then((response) => response.json())
+				.then(
+					(json) => {
+						this.#removeFromArray(id);
+						resolve(json.id);
+					},
+					(error) => {
+						reject(error);
 					}
 				);
 		});
