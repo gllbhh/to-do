@@ -1,3 +1,5 @@
+<script src="https://gist.github.com/rxaviers/7360908.js"></script>
+
 # To-Do: To-Do
 
 ✅✅❌❌❌❌❌❌
@@ -161,3 +163,11 @@ Change link to `\js\index.js` to support export/import
 Add delete task functionality. Everything worked fine.
 
 ![ToDo week 5](./screenshots/todo_part_5.png)
+
+## To-Do part 6
+
+My paranoja pays off. I already figured how to use .env file. :smile:
+
+All database handling code now moved to `.\server\helpers\db.js` file.
+
+`.\server\index.js` is modified to accomodate the changes.
