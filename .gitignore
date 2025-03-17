@@ -44,4 +44,4 @@ coverage/
 *.tmp
 *.swp
 
-/server
+/server/
