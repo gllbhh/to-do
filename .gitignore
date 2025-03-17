@@ -43,3 +43,5 @@ coverage/
 # 10. Temporary files
 *.tmp
 *.swp
+
+/server
