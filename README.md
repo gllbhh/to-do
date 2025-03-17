@@ -171,3 +171,7 @@ My paranoja pays off. I already figured how to use .env file. :smile:
 All database handling code now moved to `.\server\helpers\db.js` file.
 
 `.\server\index.js` is modified to accomodate the changes.
+
+## To-Do part 7
+
+Add file `.\server\routes.todo.js`. It will contain all the backend code for todo database. If there will be another database, all code related to it will be placed in a different file.
