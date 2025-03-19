@@ -5,7 +5,7 @@ JavaScript that runs on the index.html page
 
 // Backend API base URL
 //const BACKEND_ROOT_URL = "http://localhost:3001";
-const BACKEND_ROOT_URL = "https://todo-back-end-pwlr.onrender.com/";
+const BACKEND_ROOT_URL = "https://todo-back-end-pwlr.onrender.com";
 
 // Import the Todos class from the class directory
 import { Todos } from "./class/Todos.js";
