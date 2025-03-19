@@ -2,7 +2,7 @@
 
 # To-Do: To-Do
 
-✅✅✅✅✅✅✅❌
+✅✅✅✅✅✅✅✅
 
 ![Pink Panter To-Do list](https://i.redd.it/y14xp8glyab31.jpg)
 
