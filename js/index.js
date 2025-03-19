@@ -4,7 +4,8 @@ JavaScript that runs on the index.html page
 */
 
 // Backend API base URL
-const BACKEND_ROOT_URL = "http://localhost:3001";
+//const BACKEND_ROOT_URL = "http://localhost:3001";
+const BACKEND_ROOT_URL = "https://todo-back-end-pwlr.onrender.com/";
 
 // Import the Todos class from the class directory
 import { Todos } from "./class/Todos.js";
@@ -67,23 +68,23 @@ const getTasks = async () => {
 };
 
 // Function to save a new task to the backend
-const saveTask = async (task) => {
-	try {
-		const json = JSON.stringify({ description: task }); // Convert task description to JSON format
+// const saveTask = async (task) => {
+// 	try {
+// 		const json = JSON.stringify({ description: task }); // Convert task description to JSON format
 
-		// Send a POST request to the backend to save the task
-		const response = await fetch(BACKEND_ROOT_URL + "/new", {
-			method: "post",
-			headers: {
-				"Content-Type": "application/json", // Specify JSON format
-			},
-			body: json, // Send task data in request body
-		});
-		return response.json(); // Parse and return the JSON response
-	} catch (error) {
-		alert("Error retrieving tasks:" + error.message); // Show an error alert if request fails
-	}
-};
+// 		// Send a POST request to the backend to save the task
+// 		const response = await fetch(BACKEND_ROOT_URL + "/new", {
+// 			method: "post",
+// 			headers: {
+// 				"Content-Type": "application/json", // Specify JSON format
+// 			},
+// 			body: json, // Send task data in request body
+// 		});
+// 		return response.json(); // Parse and return the JSON response
+// 	} catch (error) {
+// 		alert("Error retrieving tasks:" + error.message); // Show an error alert if request fails
+// 	}
+// };
 
 // Event listener for the input field to handle "Enter" key press
 input.addEventListener("keypress", (event) => {
