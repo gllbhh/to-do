@@ -175,3 +175,11 @@ All database handling code now moved to `.\server\helpers\db.js` file.
 ## To-Do part 7
 
 Add file `.\server\routes.todo.js`. It will contain all the backend code for todo database. If there will be another database, all code related to it will be placed in a different file.
+
+## To-Do part 8
+
+The Deployment was probably the hardest part of the assignment. I could not manage to make the environmental variables to work with `.env.valut`. I ended up by adding them manually from the WEB interface on render.com. After that, it was more or less straight forward.
+
+Another issue I had was the back-end url address. I had a '/' character in the end of the link and my page was loading tasks from the database but was failing to add or remove a task. Solved by removing '/'. Magic...
+
+![ToDo week 8](https://i.pinimg.com/736x/c3/69/23/c36923fc3fcc6d4002e54406a91f254f.jpg)
